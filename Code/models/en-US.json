@@ -1,0 +1,31 @@
+{
+  "languageModel": {
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "ThreeByThreeIntent",
+        "samples": [
+          "scramble my three by three",
+          "scramble my cube",
+          "mess up my cube ",
+          "mess up my three by three",
+          "give me an algorithm to scramble my three by three",
+          "give me an algorithm to scramble my cube"
+        ],
+        "slots": []
+      }
+    ],
+    "invocationName": "cube scrambler"
+  }
+}

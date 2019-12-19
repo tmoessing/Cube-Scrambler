@@ -1,0 +1,46 @@
+{
+  "skillManifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "A game to catch all the creatures.",
+          "examplePhrases": [
+            "Alexa open Bo Jo",
+            "Catch a creature",
+            "Alexa tell Bo Jo to catch a creature"
+          ],
+          "keywords": [
+            "Bo",
+            "Jo",
+            "Game",
+            "Catching",
+            "Creatures"
+          ],
+          "name": "BoJo",
+          "smallIconUri": "https://api.amazonalexa.com/v0/skills/amzn1.ask.skill.83ea262b-2111-43c2-b9bc-f9013fbbe76a/images/eyJkIjoiUWpTQU1URFNuMjRzNXdCc2FZQnl1eHlPNDVjdW9kS0VlZUJiYWY5YnpXb1QyeDVxWFlZUU1HNE90bzA2NUNNWG5oQVFnKzgrRG5BbUlDbU9nZHUrdDZPK01jWTJpc2l2amZXakFFQStQWnVreE54cElvZ3MyeVdmdHR1Z2hVK0UiLCJpdiI6IkZzampYOGk4dkozcmg3RzRiOTZXWnc9PSIsInYiOjF9",
+          "description": "A game to catch all the creatures. New creatures coming soon.",
+          "largeIconUri": "https://api.amazonalexa.com/v0/skills/amzn1.ask.skill.83ea262b-2111-43c2-b9bc-f9013fbbe76a/images/eyJkIjoiMGVVcFZ1K1FveVNTS3p1aksrMG1FMmUwK21kSUJNK3cyaXJWSGQ4VWUwZDZuMk1LeG1aSEYvaEhxWHlIcTFqVlNDVGxCS2tBU3pRV0cwVFoyUGVjZkZWQlhGQ3hDLzZna1g2QkNvWkV1ZVZjUFAwY3ZlY2ZCcytkSVlKd1VLeFk4YVdxYzhKbTZVeGFSQzBkdWNzaUVRPT0iLCJpdiI6Im1RTXcrb0FNckVuYkJPY0NIQXhLL0E9PSIsInYiOjF9"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Ask Alexa to open Bo Jo, she will then give a short intro of how to play. Next say, \"catch a creature\" it will then pick a creature. This is for the devpost contest.",
+      "category": "CHILDRENS_GAMES",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda\\custom"
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": true,
+      "usesPersonalInfo": false
+    }
+  }
+}
