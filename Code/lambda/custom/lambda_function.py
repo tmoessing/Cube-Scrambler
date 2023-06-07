@@ -1,13 +1,3 @@
-"""
-This sample demonstrates a simple skill built with the Amazon Alexa Skills Kit.
-The Intent Schema, Custom Slots, and Sample Utterances for this skill, as well
-as testing instructions are located at http://amzn.to/1LzFrj6
-
-For additional samples, visit the Alexa Skills Kit Getting Started guide at
-http://amzn.to/1LGWsLG
-"""
-
-
 from __future__ import print_function
 import random
 
@@ -35,33 +25,6 @@ def build_speechlet_response(title, content, speech_output, reprompt_text, shoul
         'shouldEndSession': should_end_session
     }
 
-def build_speechlet_response_with_image(title, content, speech_output, reprompt_text, should_end_session):
-
-    smallImageUrl = 'https://s3.amazonaws.com/bojo-creatures/' + creature_caught + 'Small.png'
-    largeImageUrl = 'https://s3.amazonaws.com/bojo-creatures/' + creature_caught + 'Large.png'
-    
-    return {
-        'outputSpeech': {
-            'type': 'SSML',
-            'ssml': '<speak>' + speech_output + '</speak>'
-        },
-        'card': {
-            'type': 'Standard',
-            'title': title,
-            'text': content,
-            'image': {
-                'smallImageUrl': smallImageUrl,
-                'largeImageUrl': largeImageUrl
-            }
-        },
-        'reprompt': {
-            'outputSpeech': {
-                'type': 'PlainText',
-                'text': reprompt_text
-            }
-        },
-        'shouldEndSession': should_end_session
-    }
 
 def build_response(session_attributes, speechlet_response):
     return {
@@ -393,7 +356,7 @@ def on_intent(intent_request, session):
         return handle_Pyraminx_intent(intent_name,session)
     elif intent_name == "AMAZON.HelpIntent" :
         return handle_help_intent(intent_name,session)
-    elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
+    elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent" or intent_name == "AMAZON.NavigateHomeIntent":
         return handle_end_intent()
     else:
         print("what the what is " + intent_name)
@@ -424,7 +387,7 @@ def lambda_handler(event, context):
     function.
     """
     if (event['session']['application']['applicationId'] !=
-             "amzn1.ask.skill.9d25964e-f5a2-49d9-b10c-346769d85e04"):
+             "amzn1.ask.skill.f5bd7bfc-fe2d-4b7e-85bc-20f6ea35dc34"):
          raise ValueError("Invalid Application ID")
     
 
